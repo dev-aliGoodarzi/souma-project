@@ -1,0 +1,41 @@
+@import "./--veriables.scss";
+
+@font-face {
+  font-family: iran-sans;
+  src: url("./Fonts/iran-sans.ttf");
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+  outline: 0px;
+
+  text-decoration: none;
+
+  font : {
+    family: iran-sans;
+  }
+}
+
+body {
+  width: 100%;
+  height: 100dvh;
+
+  a {
+    color: #000;
+  }
+
+  #root {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.activeLink {
+  color: $primaryColor !important;
+}
+
+.rtl {
+  direction: rtl;
+}

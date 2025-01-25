@@ -1,0 +1,32 @@
+@font-face {
+  font-family: iran-sans;
+  src: url("./Fonts/iran-sans.ttf");
+}
+* {
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+  outline: 0px;
+  text-decoration: none;
+  font-family: iran-sans;
+}
+
+body {
+  width: 100%;
+  height: 100dvh;
+}
+body a {
+  color: #000;
+}
+body #root {
+  width: 100%;
+  height: 100%;
+}
+
+.activeLink {
+  color: #347855 !important;
+}
+
+.rtl {
+  direction: rtl;
+}/*# sourceMappingURL=Global.css.map */
