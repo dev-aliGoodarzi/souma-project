@@ -8,18 +8,22 @@ import styles from "./HomePageSlider.module.css";
 
 // Components
 import Slider from "../../../../Components/CommonComponents/Slider/Slider";
-import { useReduxSelector } from "../../../../StateManagement/ReduxToolkit/Store/Store";
 import { SliderCard } from "./SliderCard/SliderCard";
 import { WithMdPadding } from "../../../../Components/StyledComponents/StyledComponents";
 // Components
 
+// Redux
+import { useReduxSelector } from "../../../../StateManagement/ReduxToolkit/Store/Store";
+// Redux
+
 const HomePageSlider = () => {
-  const { data, isDone, isError, isPending } = useReduxSelector(
-    (state) => state.contents.allContents
-  );
+  const { data } = useReduxSelector((state) => state.contents.allContents);
 
   return (
-    <WithMdPadding className="relative w-full" padding="0px 8px">
+    <WithMdPadding
+      className={`${styles.homepageSliderContent} relative w-full`}
+      padding="0px 8px"
+    >
       <Slider
         containerClassName="w-full"
         slides={data.map((item) => (
