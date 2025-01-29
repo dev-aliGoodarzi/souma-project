@@ -53,7 +53,14 @@ const links: T_Link[] = [
 
 const Header = () => {
   return (
-    <Container className={`${styles.headerContainer}`}>
+    <Container
+      className={`${styles.headerContainer}`}
+      width="100%"
+      display="flex"
+      flexDirection="row"
+      alignItems="center"
+      justifyContent="space-between"
+    >
       <LoginButton>ورود</LoginButton>
       <Container gap="48px" className="rtl">
         {links.map((link) => (

@@ -11,7 +11,6 @@ import { Container as _Container } from "./../../Components/StyledComponents/Sty
 // Styled Component
 
 // Components
-import HomePageFilterForm from "./HomePageFilterForm/HomePageFilterForm";
 import HomePageDataViewer from "./HomePageDataViewer/HomePageDataViewer";
 // Components
 
@@ -21,10 +20,10 @@ const Home = () => {
   return (
     <Container
       className={`${styles.homeContainer} rtl`}
-      flexDirection={window.innerWidth < 800 ? "column" : "row"}
-      width="100%"
+      flexDirection={"column"}
+      maxWidth={"1280px"}
+      alignItems="center"
     >
-      <HomePageFilterForm />
       <HomePageDataViewer />
     </Container>
   );

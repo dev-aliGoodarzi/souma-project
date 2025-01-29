@@ -4,7 +4,7 @@ export type T_SourceType = 0 | 1 | 2;
 
 export type T_ContentType = 0 | 1 | 2;
 
-export type T_SendingDataForGettingContents = {
+export type T_SendingDataForGettingContents = Partial<{
   excelProperties: [];
   skip: number;
   take: number;
@@ -19,4 +19,4 @@ export type T_SendingDataForGettingContents = {
   contentType: T_ContentType;
   isActive: true;
   includeFile: true;
-};
+}>;

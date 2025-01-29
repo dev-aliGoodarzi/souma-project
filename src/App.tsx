@@ -24,10 +24,15 @@ import Router from "./Routes/Router";
 
 const App = () => {
   return (
-    <LayoutContainer>
-      <WithMdPadding>
+    <LayoutContainer display="flex" flexDirection="column" width="100%">
+      <WithMdPadding
+        id="xxx"
+        display="flex"
+        flexDirection="column"
+        width="100%"
+        maxWidth="1280px"
+      >
         <Header />
-
         {/*  */}
         {/*  */}
 

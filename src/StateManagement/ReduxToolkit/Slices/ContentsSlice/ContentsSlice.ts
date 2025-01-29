@@ -13,6 +13,7 @@ import { I_ReduxAsyncBasicType } from "../../Handlers/ReduxAsyncHelperHandlers";
 
 // Models
 import { T_SendingDataForGettingContents } from "../../../../Interfaces/__SENDING__DATA__SCHEMA__/Contents/ContentsSendingData";
+import { I_Content } from "../../../../Interfaces/Contents/ContentsInterface";
 // Models
 
 // Services
@@ -21,7 +22,7 @@ import { getContentsService } from "../../../../Services/Content/get/getContents
 
 const initialState: {
   allContents: I_ReduxAsyncBasicType & {
-    data: any[];
+    data: I_Content[];
   };
 } = {
   allContents: {
@@ -38,7 +39,10 @@ export const getAsyncAllContents = createAsyncThunk(
     try {
       const { data } = await getContentsService(_data);
       return data;
-    } catch (err) {}
+    } catch (err) {
+      console.log(err);
+      throw err;
+    }
   }
 );
 
@@ -58,12 +62,11 @@ export const ContentsSlice = createSlice({
     });
     builder.addCase(getAsyncAllContents.fulfilled, (state, action) => {
       setIsDone(state.allContents);
-      state.allContents = action.payload; // ex : data getted !
+      state.allContents.data = action.payload.data;
     });
     builder.addCase(getAsyncAllContents.rejected, (state) => {
       setIsError(state.allContents);
     });
-
     //
     //
     //

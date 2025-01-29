@@ -4,18 +4,19 @@ import { _axios } from "../../__BaseConfig__/_axios/_axios";
 
 // Models
 import { T_SendingDataForGettingContents } from "../../../Interfaces/__SENDING__DATA__SCHEMA__/Contents/ContentsSendingData";
+import { AxiosResponse } from "axios";
+import { I_Content } from "../../../Interfaces/Contents/ContentsInterface";
 // Models
 
-// Functions
-import { createBodyOfRequestForUrlIncluded } from "../../__BaseConfig__/_axios/createBodyOfRequestForUrlIncluded";
-// Functions
-
-export const getContentsService = (_data: T_SendingDataForGettingContents) => {
+export const getContentsService = (
+  _data: T_SendingDataForGettingContents
+): Promise<
+  AxiosResponse<{
+    data: I_Content[];
+  }>
+> => {
   return _axios.post(
-    `
-    // api - the api isnt work .
-    i just implement it to show you , how i code ;)
-    `,
-    createBodyOfRequestForUrlIncluded(_data)
+    "https://mehrapi.souma-p.ir/api/v1/Content/get-contents",
+    _data
   );
 };

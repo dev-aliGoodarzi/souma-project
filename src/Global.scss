@@ -1,5 +1,9 @@
 @import "./--veriables.scss";
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @font-face {
   font-family: iran-sans;
   src: url("./Fonts/iran-sans.ttf");
@@ -39,3 +43,45 @@ body {
 .rtl {
   direction: rtl;
 }
+
+// .relative {
+//   position: relative;
+// }
+
+// .w-full {
+//   width: 100%;
+// }
+
+// .w-800 {
+//   width: 800px;
+// }
+
+// .h-400 {
+//   height: 400px;
+// }
+
+// .truncate {
+//   overflow: hidden;
+//   text-overflow: ellipsis;
+//   white-space: nowrap;
+// }
+
+// .line-clamp-2 {
+//   overflow: hidden;
+//   display: -webkit-box;
+//   -webkit-box-orient: vertical;
+//   -webkit-line-clamp: 2;
+//   height: 45px;
+// }
+
+// .h-250 {
+//   height: 250px !important;
+// }
+
+// .object-cover {
+//   object-fit: cover;
+// }
+
+// .mt-6 {
+//   margin-top: 6px;
+// }

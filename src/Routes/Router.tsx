@@ -25,7 +25,10 @@ const Router = () => {
       pathname
     );
 
-    if (!currRoute) return;
+    if (!currRoute) {
+      document.title = "صفحه پیدا نشد";
+      return;
+    }
 
     const desiredRouteName = Routes.find(
       (item) => item.path === currRoute[0].route.path
